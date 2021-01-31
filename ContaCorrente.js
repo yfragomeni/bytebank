@@ -2,8 +2,6 @@ import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
     static numeroDeContas = 0;
-    agencia;
-    _cliente;
     // #saldo -> atributo privado
     _saldo = 0;
 
@@ -26,6 +24,7 @@ export class ContaCorrente {
         this.agencia = agencia;
         // usando acessor de dentro da classe
         this.cliente = cliente;
+        this._saldo = 0;
         // Atributo estático da Conta Corrente, como um todo.
         ContaCorrente.numeroDeContas +=1;
     }
